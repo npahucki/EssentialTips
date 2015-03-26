@@ -163,7 +163,7 @@
 - (IBAction)didClickTellAFriend:(id)sender {
     NSString *email = [NSString stringWithFormat:@"mailto:?subject=Get Tips essential to your baby's development too!&body=Hey,\nI found a new app that sends me customized parenting tips for %@. I'm really enjoying using it! You can get it here: %@.\n\n%@",
                                                  Baby.currentBaby.name,
-                                                 @"https://itunes.apple.com/us/app/dataparenting-baby-milestones/id905124835?mt=8",
+                                                 @"https://itunes.apple.com/us/app/id980367889?ls=1&mt=8",
                                                  [ParentUser currentUser].fullName ?: @""];
     email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
