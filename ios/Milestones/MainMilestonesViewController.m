@@ -18,7 +18,7 @@
     [super viewDidLoad];
     self.textLabel.font = [UIFont fontForAppWithType:Medium andSize:32.0];
     self.textLabel.textColor = [UIColor appGreyTextColor];
-    self.textLabel.text = [NSString stringWithFormat:self.textLabel.text, [Baby currentBaby].name, [Baby currentBaby].isMale ? @"him" : @"her"];
+    self.textLabel.text = [NSString stringWithFormat:self.textLabel.text, [Baby currentBaby].name, [Baby currentBaby].isMale ? @"his" : @"her"];
     self.getTheAppButton.titleLabel.font = [UIFont fontForAppWithType:Book andSize:23.0];
     [self.getTheAppButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
 }
