@@ -19,6 +19,7 @@
 @property(weak, nonatomic) IBOutlet UIBarButtonItem *backButton;
 @property(weak, nonatomic) IBOutlet UIImageView *liveChatStatus;
 @property(weak, nonatomic) IBOutlet UIButton *earlyReaderButton;
+@property (weak, nonatomic) IBOutlet UIButton *dataParentingButton;
 
 @property(weak, nonatomic) IBOutlet UIButton *liveChatButton;
 @end

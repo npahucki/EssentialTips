@@ -63,7 +63,6 @@
                             Baby *newBaby = [objects firstObject];
                             if (![Baby currentBaby] || [newBaby.updatedAt compare:[Baby currentBaby].updatedAt] == NSOrderedDescending) {
                                 [Baby setCurrentBaby:newBaby];
-                                if (newBaby) [self showTutorialPromptIfNeeded:user];
                             }
                         } else if (!cachedResult) { // Don't show the baby screen when there are simply no objects in the cache.
                             // Must show the enter baby screen since there are none registered yet
@@ -110,28 +109,6 @@
     if ([segue.identifier isEqualToString:kDDSegueEnterBabyInfo]) {
         OnboardingStepViewController * topController = (OnboardingStepViewController *) ((UINavigationController *)segue.destinationViewController).topViewController;
         topController.baby = Baby.currentBaby;
-    }
-}
-
-- (void)showTutorialPromptIfNeeded:(ParentUser *)user {
-    if (!user.shownTutorialPrompt) {
-        user.shownTutorialPrompt = YES;
-
-        if (MPTweakValue(@"ShowTutorialMandatory", YES)) {
-            [[[UIAlertView alloc] initWithTitle:@"Before You Get Started"
-                                        message:@"You will be shown a quick tutorial on how things work. You can watch it again anytime under 'account preferences'"
-                                       delegate:nil
-                              cancelButtonTitle:@"Ok"
-                              otherButtonTitles:nil] showWithButtonBlock:^(NSInteger buttonIndex) {
-                [self performSegueWithIdentifier:@"showTutorial" sender:self];
-            }];
-        } else {
-            [[[UIAlertView alloc] initWithTitle:@"Welcome!"
-                                        message:@"If you want to get a feel for how things work, there is a tutorial availble under 'account preferences'"
-                                       delegate:nil
-                              cancelButtonTitle:@"Ok"
-                              otherButtonTitles:nil] show];
-        }
     }
 }
 

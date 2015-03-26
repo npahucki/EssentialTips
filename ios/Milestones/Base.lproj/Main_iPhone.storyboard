@@ -1135,6 +1135,42 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="88" id="9eZ-7t-mEo">
+                                        <rect key="frame" x="0.0" y="198" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9eZ-7t-mEo" id="FtU-Y3-kK8">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lUg-YX-EKS">
+                                                    <rect key="frame" x="16" y="4" width="300" height="80"/>
+                                                    <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <state key="normal" image="dataParentingIcon">
+                                                        <attributedString key="attributedTitle">
+                                                            <fragment>
+                                                                <string key="content">NSAttributedString
+</string>
+                                                                <attributes>
+                                                                    <color key="NSBackgroundColor" red="0.89411764705882357" green="0.89411764705882357" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <font key="NSFont" size="12" name="Menlo-Regular"/>
+                                                                </attributes>
+                                                            </fragment>
+                                                        </attributedString>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="didClickDataParenting:" destination="W69-aI-Opj" eventType="touchUpInside" id="dLr-It-NPe"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="lUg-YX-EKS" secondAttribute="bottom" constant="4" id="CrM-56-ygn"/>
+                                                <constraint firstItem="lUg-YX-EKS" firstAttribute="leading" secondItem="FtU-Y3-kK8" secondAttribute="leading" constant="16" id="L7A-ta-3bX"/>
+                                                <constraint firstItem="lUg-YX-EKS" firstAttribute="top" secondItem="FtU-Y3-kK8" secondAttribute="top" constant="4" id="T8G-Us-rET"/>
+                                                <constraint firstAttribute="trailing" secondItem="lUg-YX-EKS" secondAttribute="trailing" constant="4" id="aW3-b5-dId"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Show" id="Myu-wc-TfU">
@@ -1212,6 +1248,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="backButton" destination="FcW-sC-j2b" id="Bcx-a7-GYx"/>
+                        <outlet property="dataParentingButton" destination="lUg-YX-EKS" id="lvm-0T-oqo"/>
                         <outlet property="earlyReaderButton" destination="4Z4-cM-plg" id="JsG-1P-tQG"/>
                         <outlet property="liveChatButton" destination="5ex-ag-tMD" id="B0O-eV-kHz"/>
                         <outlet property="liveChatStatus" destination="RTe-5j-NGC" id="T3T-SM-y4g"/>
@@ -1761,12 +1798,6 @@
                                     <outlet property="delegate" destination="sbE-5m-ILI" id="yEr-aw-gXe"/>
                                 </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data Parenting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXG-k0-feO">
-                                <rect key="frame" x="16" y="52" width="288" height="75"/>
-                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="25"/>
-                                <color key="textColor" red="0.1019607857" green="0.55686277149999996" blue="0.62352943419999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AeI-UZ-xWw">
                                 <rect key="frame" x="0.0" y="515" width="320" height="55"/>
                                 <constraints>
@@ -1791,6 +1822,14 @@
                                     <action selector="didClickForgotPasswordButton:" destination="sbE-5m-ILI" eventType="touchUpInside" id="x6f-Jd-xuQ"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXG-k0-feO">
+                                <rect key="frame" x="16" y="52" width="288" height="75"/>
+                                <string key="text">Infant IQ 
+Essential Tips</string>
+                                <fontDescription key="fontDescription" name="GothamRounded-Bold" family="Gotham Rounded" pointSize="25"/>
+                                <color key="textColor" red="0.1019607857" green="0.55686277149999996" blue="0.62352943419999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1881,6 +1920,7 @@
         <image name="camIconWithBorder" width="226" height="226"/>
         <image name="cameraButton_pressed" width="212" height="212"/>
         <image name="closeMenuButton" width="31" height="32"/>
+        <image name="dataParentingIcon" width="76" height="76"/>
         <image name="earlyReaderIcon" width="76" height="76"/>
         <image name="facebookIcon" width="29" height="29"/>
         <image name="femaleIcon" width="80" height="80"/>
@@ -1906,7 +1946,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="zMK-LI-8Wn"/>
+        <segue reference="q2I-r6-ZGD"/>
         <segue reference="M4B-Bx-AaL"/>
         <segue reference="9u5-1o-6Cv"/>
     </inferredMetricsTieBreakers>

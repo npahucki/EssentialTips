@@ -72,9 +72,6 @@
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"suppressAutoShowNoteMilestoneShareScreen"];
 }
 
-
-
-
 - (BOOL)shownTutorialPrompt {
     return [[NSUserDefaults standardUserDefaults] boolForKey:@"shownTutorialPrompt"];
 }

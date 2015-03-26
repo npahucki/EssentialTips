@@ -44,21 +44,54 @@
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    [self setEarlyOtherAppDescription];
+    [self setDataParentingOtherAppDescription];
+}
+
+-(void) setEarlyOtherAppDescription {
     NSMutableParagraphStyle *center = [[NSMutableParagraphStyle alloc] init];
     center.alignment = NSTextAlignmentCenter;
     NSAttributedString *titleString = [[NSAttributedString alloc] initWithString:@"Early Reader\n" attributes:@{
+                                                                                                                NSFontAttributeName : [UIFont fontForAppWithType:Bold andSize:18.0],
+                                                                                                                NSForegroundColorAttributeName : UIColorFromRGB(0xf0045a),
+                                                                                                                NSParagraphStyleAttributeName : center
+                                                                                                                
+                                                                                                                }];
+    NSAttributedString *descriptionString = [[NSAttributedString alloc] initWithString:@"Use the proven Doman method to teach your young baby how to read!\n" attributes:@{
+                                                                                                                                                                    NSFontAttributeName : [UIFont fontForAppWithType:Book andSize:16.0],
+                                                                                                                                                                    NSForegroundColorAttributeName : [UIColor appGreyTextColor],
+                                                                                                                                                                    NSParagraphStyleAttributeName : center
+                                                                                                                                                                    
+                                                                                                                                                                    }];
+    NSAttributedString *detailsString = [[NSAttributedString alloc] initWithString:@"For babies 6 months to 4 years old." attributes:@{
+                                                                                                                                       NSFontAttributeName : [UIFont fontForAppWithType:Book andSize:10.0],
+                                                                                                                                       NSForegroundColorAttributeName : [UIColor appGreyTextColor],
+                                                                                                                                       NSParagraphStyleAttributeName : center
+                                                                                                                                       }];
+    NSMutableAttributedString *fullString = [[NSMutableAttributedString alloc] initWithAttributedString:titleString];
+    [fullString appendAttributedString:descriptionString];
+    [fullString appendAttributedString:detailsString];
+    self.earlyReaderButton.titleLabel.numberOfLines = 0;
+    [self.earlyReaderButton setAttributedTitle:fullString forState:UIControlStateNormal];
+    
+}
+
+-(void) setDataParentingOtherAppDescription {
+    NSMutableParagraphStyle *center = [[NSMutableParagraphStyle alloc] init];
+    center.alignment = NSTextAlignmentCenter;
+    NSAttributedString *titleString = [[NSAttributedString alloc] initWithString:@"DataParenting\n" attributes:@{
             NSFontAttributeName : [UIFont fontForAppWithType:Bold andSize:18.0],
-            NSForegroundColorAttributeName : UIColorFromRGB(0xf0045a),
+            NSForegroundColorAttributeName : [UIColor appNormalColor],
             NSParagraphStyleAttributeName : center
 
     }];
-    NSAttributedString *descriptionString = [[NSAttributedString alloc] initWithString:@"Use the Doman method to teach your young baby how to read!\n" attributes:@{
+    NSAttributedString *descriptionString = [[NSAttributedString alloc] initWithString:@"Track and remember all your baby's first times\n" attributes:@{
             NSFontAttributeName : [UIFont fontForAppWithType:Book andSize:16.0],
             NSForegroundColorAttributeName : [UIColor appGreyTextColor],
             NSParagraphStyleAttributeName : center
 
     }];
-    NSAttributedString *detailsString = [[NSAttributedString alloc] initWithString:@"For babies 6 months to 4 years old." attributes:@{
+    NSAttributedString *detailsString = [[NSAttributedString alloc] initWithString:@"Includes customized tips and game ideas." attributes:@{
             NSFontAttributeName : [UIFont fontForAppWithType:Book andSize:10.0],
             NSForegroundColorAttributeName : [UIColor appGreyTextColor],
             NSParagraphStyleAttributeName : center
@@ -66,9 +99,12 @@
     NSMutableAttributedString *fullString = [[NSMutableAttributedString alloc] initWithAttributedString:titleString];
     [fullString appendAttributedString:descriptionString];
     [fullString appendAttributedString:detailsString];
-    self.earlyReaderButton.titleLabel.numberOfLines = 0;
-    [self.earlyReaderButton setAttributedTitle:fullString forState:UIControlStateNormal];
+    self.dataParentingButton.titleLabel.numberOfLines = 0;
+    [self.dataParentingButton setAttributedTitle:fullString forState:UIControlStateNormal];
+
 }
+
+
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
@@ -111,6 +147,12 @@
     [UsageAnalytics trackClickedToViewOtherAppInAppStore:@"Early Reader"];
 }
 
+- (IBAction)didClickDataParenting:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"itms://itunes.apple.com/us/app/dataparenting-baby-milestones/id905124835?mt=8"]];
+    [UsageAnalytics trackClickedToViewOtherAppInAppStore:@"DataParenting"];
+
+}
+
 
 - (IBAction)didClickReadTermsAndConditions:(id)sender {
     WebViewerViewController *vc = [WebViewerViewController webViewForUrlString:kDDURLTermsAndConditions];
@@ -149,9 +191,6 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
 }
 
-- (IBAction)didClickViewTutorial:(id)sender {
-    [UsageAnalytics trackTutorialManuallyTaken];
-}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
     return 44;
