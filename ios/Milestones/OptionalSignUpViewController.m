@@ -22,7 +22,6 @@
     [super viewDidLoad];
     [[UIButton appearanceWhenContainedIn:[self class], nil] setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
     [UIButton appearanceWhenContainedIn:[self class], nil].titleLabel.font = [UIFont fontForAppWithType:Bold andSize:14.0];
-    self.navigationItem.prompt = [self.navigationItem.prompt stringByAppendingString:@" (Optional)"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -94,17 +93,18 @@
     // If username and password are filled out, then use this as signup data.
     [self.view endEditing:YES];
     if (![ParentUser currentUser].isLoggedIn) {
+        if (![_emailTextField.text isValidEmailAddress]) {
+            [[[UIAlertView alloc]                                                  initWithTitle:@"Valid Email Address Required" message:
+                    @"Please provide a valid email address OR use Facebook login" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
+            return;
+        };
+
         if (self.passwordTextField.text.length < 4) {
             [[[UIAlertView alloc]                                                                  initWithTitle:@"Password Required" message:
                     @"Please provide a password of four or more characters" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
             return;
         }
 
-        if (![_emailTextField.text isValidEmailAddress]) {
-            [[[UIAlertView alloc]                                                  initWithTitle:@"Valid Email Address Required" message:
-                    @"Please provide a valid email address" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
-            return;
-        };
 
         [UsageAnalytics trackSignupTrigger:@"onboardingOptionalSignup" withChoice:YES];
 
