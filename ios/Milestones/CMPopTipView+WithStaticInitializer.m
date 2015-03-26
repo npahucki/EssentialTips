@@ -12,7 +12,7 @@
     CMPopTipView *tipView = [[CMPopTipView alloc] initWithMessage:msg];
     tipView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:.80];
     tipView.textColor = [UIColor whiteColor];
-    tipView.textFont = [UIFont fontForAppWithType:Medium andSize:16.0];
+    tipView.textFont = [UIFont fontForAppWithType:Medium andSize:23.0];
     tipView.has3DStyle = NO;
     tipView.hasShadow = YES;
     tipView.hasGradientBackground = YES;

@@ -949,14 +949,14 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="dataParentingIconBig" translatesAutoresizingMaskIntoConstraints="NO" id="t1B-Ep-q55">
-                                <rect key="frame" x="93" y="72" width="134" height="134.5"/>
+                                <rect key="frame" x="93" y="72" width="134" height="135"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="YBK-Or-e6X"/>
                                     <constraint firstAttribute="width" secondItem="t1B-Ep-q55" secondAttribute="height" multiplier="1:1" id="u03-A6-FV7"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record %@'s milestones and get tips and game ideas taylored just for %@" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XDP-sR-dqD">
-                                <rect key="frame" x="16" y="222" width="288" height="124.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record %@'s milestones and get tips and game ideas taylored for %@ development" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XDP-sR-dqD">
+                                <rect key="frame" x="16" y="222" width="288" height="125"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>

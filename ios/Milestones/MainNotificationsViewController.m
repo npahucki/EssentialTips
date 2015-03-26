@@ -7,9 +7,11 @@
 //
 
 #import <AudioToolbox/AudioToolbox.h>
+#import <CMPopTipView/CMPopTipView.h>
 #import "MainNotificationsViewController.h"
 #import "NotificationTableViewController.h"
 #import "NoConnectionAlertView.h"
+#import "CMPopTipView+WithStaticInitializer.h"
 
 @interface MainNotificationsViewController ()
 
@@ -27,8 +29,14 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(appEnterForeground:) name:UIApplicationDidBecomeActiveNotification object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(gotPushNotification:) name:kDDNotificationPushReceived object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(tipAssignmentViewedOrHidden:) name:kDDNotificationTipAssignmentViewedOrHidden object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(currentBabyChanged) name:kDDNotificationCurrentBabyChanged object:nil];
+
     _currentBadge = -1;
     return self;
+}
+
+- (void)currentBabyChanged {
+    [self showToastTipIfNeeded];
 }
 
 - (void)viewDidLoad {
@@ -45,7 +53,38 @@
     BOOL isLoggedIn = [ParentUser currentUser].isLoggedIn;  // Note may be linked with Facebook, but still not have Email address.
     self.containerView.hidden = !isLoggedIn;
     self.signUpContainerView.hidden = isLoggedIn;
+    [self showToastTipIfNeeded];
 }
+
+- (void)showToastTipIfNeeded {
+    if([Baby currentBaby] && ![ParentUser currentUser].shownTutorialPrompt) {
+        // Toggle popTipView when a standard UIButton is pressed
+        NSString *msg = [NSString stringWithFormat:@"Every few days, you'll receive a new tip or game idea based on %@'s age.", [Baby currentBaby].name];
+        self.tipView = [CMPopTipView instanceWithApplicationLookAndFeelAndMessage:msg];
+        self.tipView.delegate = self;
+        self.tipView.maxWidth = self.view.frame.size.width - 30;
+
+        // HACK ALERT: There is no way to find the view for the tab bar item, and seemingly no way to
+        // map the tabBarItem back to the view...so as long as we don't add anything after the
+        // Share tab, this will keep working. Things can be added before with no problem.
+        UIView *tabBarView = nil;
+        for (UIView *view in self.tabBarController.tabBar.subviews) {
+            if ([view isKindOfClass:[UIControl class]]) {
+                tabBarView = view;
+                // We want the first one....NOTE: This wil break if we move tips to anything other than the first tab!!
+                break;
+            }
+        }
+        [self.tipView presentPointingAtView:tabBarView inView:self.tabBarController.view animated:YES];
+        [ParentUser currentUser].shownTutorialPrompt = YES;
+    }
+}
+
+- (void)popTipViewWasDismissedByUser:(CMPopTipView *)popTipView {
+    self.tipView = nil;
+    [_tableController loadObjects]; // quick hack to show any tips if push notifications turned off
+}
+
 
 - (void)ensureInitialBadgeValueSet:(BOOL)force playSoundIfUpdated:(BOOL)useSound {
     if ((_currentBadge == -1 || force) && Baby.currentBaby) {

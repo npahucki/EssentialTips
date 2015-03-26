@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "ViewControllerWithBabyInfoButton.h"
 
-@interface MainNotificationsViewController : ViewControllerWithBabyInfoButton
+@interface MainNotificationsViewController : ViewControllerWithBabyInfoButton <CMPopTipViewDelegate>
 @property(weak, nonatomic) IBOutlet UIView *containerView;
 @property(weak, nonatomic) IBOutlet UIView *signUpContainerView;
 
+@property(nonatomic, strong) CMPopTipView *tipView;
 @end
