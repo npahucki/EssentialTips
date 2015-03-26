@@ -165,6 +165,12 @@
 		E8BDE6B0193CC106001D6995 /* NSDate+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = E8BDE6AF193CC106001D6995 /* NSDate+Utils.m */; };
 		E8BDE6B2193E0951001D6995 /* Pronouns.strings in Resources */ = {isa = PBXBuildFile; fileRef = E8BDE6B1193E0951001D6995 /* Pronouns.strings */; };
 		E8BDE6B8193E0CF7001D6995 /* PronounHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E8BDE6B7193E0CF7001D6995 /* PronounHelper.m */; };
+		E8C541491AC48E5F007087A3 /* MainMilestonesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C541481AC48E5F007087A3 /* MainMilestonesViewController.m */; };
+		E8C5414A1AC48E5F007087A3 /* MainMilestonesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C541481AC48E5F007087A3 /* MainMilestonesViewController.m */; };
+		E8C5414C1AC492D0007087A3 /* EssentialTipsDev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8C5414B1AC492D0007087A3 /* EssentialTipsDev-Info.plist */; };
+		E8C5414D1AC492D0007087A3 /* EssentialTipsDev-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8C5414B1AC492D0007087A3 /* EssentialTipsDev-Info.plist */; };
+		E8C541501AC49455007087A3 /* TakePhotoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C5414F1AC49455007087A3 /* TakePhotoButton.m */; };
+		E8C541511AC49455007087A3 /* TakePhotoButton.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C5414F1AC49455007087A3 /* TakePhotoButton.m */; };
 		E8CE70F619B7C55C0051FF97 /* NotificationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE70F519B7C55C0051FF97 /* NotificationDetailViewController.m */; };
 		E8CE70F719B7C55C0051FF97 /* NotificationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8CE70F519B7C55C0051FF97 /* NotificationDetailViewController.m */; };
 		E8D00A1A188F362100DF2786 /* BabyInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D00A19188F362100DF2786 /* BabyInfoViewController.m */; };
@@ -419,7 +425,6 @@
 		E89AC323195A204100AD3869 /* UIImage+FX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FX.m"; sourceTree = "<group>"; };
 		E89BA82C1A5EE476001F8DC2 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		E8A02D5F19817CCF001E0DAB /* EssentialTipsDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EssentialTipsDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E8A02D6019817CCF001E0DAB /* EssentialTipsDev-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "EssentialTipsDev-Info.plist"; path = "/Users/npahucki/Projects/DataParenting/ios/EssentialTipsDev-Info.plist"; sourceTree = "<absolute>"; };
 		E8A99CF3196205E1008BCEFE /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		E8ABCFB8191D68FE0083ED25 /* UIDateField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDateField.h; sourceTree = "<group>"; };
 		E8ABCFB9191D68FE0083ED25 /* UIDateField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDateField.m; sourceTree = "<group>"; };
@@ -430,6 +435,11 @@
 		E8BDE6B1193E0951001D6995 /* Pronouns.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Pronouns.strings; sourceTree = "<group>"; };
 		E8BDE6B6193E0CF7001D6995 /* PronounHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PronounHelper.h; sourceTree = "<group>"; };
 		E8BDE6B7193E0CF7001D6995 /* PronounHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PronounHelper.m; sourceTree = "<group>"; };
+		E8C541471AC48E5F007087A3 /* MainMilestonesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainMilestonesViewController.h; sourceTree = "<group>"; };
+		E8C541481AC48E5F007087A3 /* MainMilestonesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainMilestonesViewController.m; sourceTree = "<group>"; };
+		E8C5414B1AC492D0007087A3 /* EssentialTipsDev-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "EssentialTipsDev-Info.plist"; sourceTree = "<group>"; };
+		E8C5414E1AC49455007087A3 /* TakePhotoButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TakePhotoButton.h; sourceTree = "<group>"; };
+		E8C5414F1AC49455007087A3 /* TakePhotoButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TakePhotoButton.m; sourceTree = "<group>"; };
 		E8CE70F419B7C55C0051FF97 /* NotificationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationDetailViewController.h; sourceTree = "<group>"; };
 		E8CE70F519B7C55C0051FF97 /* NotificationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationDetailViewController.m; sourceTree = "<group>"; };
 		E8D00A18188F362100DF2786 /* BabyInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BabyInfoViewController.h; sourceTree = "<group>"; };
@@ -653,6 +663,8 @@
 		E856BD501963210C00D00E5C /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				E8C5414E1AC49455007087A3 /* TakePhotoButton.h */,
+				E8C5414F1AC49455007087A3 /* TakePhotoButton.m */,
 				E856BD451962DB1C00D00E5C /* NoConnectionAlertView.xib */,
 				E856BD4D1962DDDB00D00E5C /* NoConnectionAlertView.h */,
 				E856BD4E1962DDDB00D00E5C /* NoConnectionAlertView.m */,
@@ -693,6 +705,8 @@
 				72F183477484F83CDC282A26 /* HipmobViewController.h */,
 				72F18A6F1AC7F78EBC742114 /* SettingsPanelNavigationController.m */,
 				72F18081D5A9249F1F95525F /* SettingsPanelNavigationController.h */,
+				E8C541471AC48E5F007087A3 /* MainMilestonesViewController.h */,
+				E8C541481AC48E5F007087A3 /* MainMilestonesViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -861,8 +875,8 @@
 		E8DD48E4188EE5B900153095 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E8C5414B1AC492D0007087A3 /* EssentialTipsDev-Info.plist */,
 				E8DD48E5188EE5B900153095 /* EssentialTips-Info.plist */,
-				E8A02D6019817CCF001E0DAB /* EssentialTipsDev-Info.plist */,
 				E8DD48E6188EE5B900153095 /* InfoPlist.strings */,
 				E8DD48E9188EE5B900153095 /* main.m */,
 				E8DD48EB188EE5B900153095 /* EssentialTips-Prefix.pch */,
@@ -1127,6 +1141,7 @@
 				E8E216101AA65220006624C4 /* 7-hipmob-operator-offline.png in Resources */,
 				E8E216341AA65220006624C4 /* hipmob-chatbubble-from.png in Resources */,
 				E8E2164C1AA65220006624C4 /* hipmob-send-active.png in Resources */,
+				E8C5414D1AC492D0007087A3 /* EssentialTipsDev-Info.plist in Resources */,
 				E8E216521AA65220006624C4 /* hipmob-webview-back.png in Resources */,
 				E8E2161E1AA65220006624C4 /* 7-hipmob-webview-forward.png in Resources */,
 				E8E216141AA65220006624C4 /* 7-hipmob-send-active.png in Resources */,
@@ -1200,6 +1215,7 @@
 				E8E2160F1AA65220006624C4 /* 7-hipmob-operator-offline.png in Resources */,
 				E8E216331AA65220006624C4 /* hipmob-chatbubble-from.png in Resources */,
 				E8E2164B1AA65220006624C4 /* hipmob-send-active.png in Resources */,
+				E8C5414C1AC492D0007087A3 /* EssentialTipsDev-Info.plist in Resources */,
 				E8E216511AA65220006624C4 /* hipmob-webview-back.png in Resources */,
 				E8E2161D1AA65220006624C4 /* 7-hipmob-webview-forward.png in Resources */,
 				E8E216131AA65220006624C4 /* 7-hipmob-send-active.png in Resources */,
@@ -1345,9 +1361,11 @@
 				E8A02D0519817CCF001E0DAB /* NotificationTableViewController.m in Sources */,
 				E8A02D0719817CCF001E0DAB /* UnitHelper.m in Sources */,
 				E8A02D0819817CCF001E0DAB /* Baby.m in Sources */,
+				E8C541511AC49455007087A3 /* TakePhotoButton.m in Sources */,
 				E8A02D0919817CCF001E0DAB /* SignUpOrLoginViewController.m in Sources */,
 				E8A02D0A19817CCF001E0DAB /* IntroScreenPageViewController.m in Sources */,
 				E8A02D0B19817CCF001E0DAB /* PronounHelper.m in Sources */,
+				E8C5414A1AC48E5F007087A3 /* MainMilestonesViewController.m in Sources */,
 				E8CE70F719B7C55C0051FF97 /* NotificationDetailViewController.m in Sources */,
 				E8A02D0E19817CCF001E0DAB /* Contants.m in Sources */,
 				E8A02D1119817CCF001E0DAB /* UIViewControllerWithHUDProgress.m in Sources */,
@@ -1404,9 +1422,11 @@
 				E866E7F31936448C004963C9 /* NotificationTableViewController.m in Sources */,
 				E872D62E194A5425003F461C /* UnitHelper.m in Sources */,
 				E81B587A1896CE7800C74C2B /* Baby.m in Sources */,
+				E8C541501AC49455007087A3 /* TakePhotoButton.m in Sources */,
 				E8F485481901C6F90030912F /* SignUpOrLoginViewController.m in Sources */,
 				E8250F43192561A7004A1B41 /* IntroScreenPageViewController.m in Sources */,
 				E8BDE6B8193E0CF7001D6995 /* PronounHelper.m in Sources */,
+				E8C541491AC48E5F007087A3 /* MainMilestonesViewController.m in Sources */,
 				E8CE70F619B7C55C0051FF97 /* NotificationDetailViewController.m in Sources */,
 				E81B58701896A75700C74C2B /* Contants.m in Sources */,
 				E8BC76D518A50AD000983025 /* UIViewControllerWithHUDProgress.m in Sources */,
@@ -1528,7 +1548,7 @@
 					"COCOAPODS=1",
 					"DISABLEIAP=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/../../DataParenting/ios/EssentialTipsDev-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Milestones/EssentialTipsDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1565,7 +1585,7 @@
 					"COCOAPODS=1",
 					"DISABLEIAP=1",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/../../DataParenting/ios/EssentialTipsDev-Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Milestones/EssentialTipsDev-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				PRODUCT_NAME = EssentialTipsDev;

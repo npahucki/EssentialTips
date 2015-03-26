@@ -925,10 +925,95 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dLV-Fg-va5">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <connections>
+                        <segue destination="bA7-l9-EC4" kind="relationship" relationship="rootViewController" id="5O5-1f-wEU"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxv-Es-Jzu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2853" y="-1280"/>
+        </scene>
+        <!--Main Milestones View Controller-->
+        <scene sceneID="Yl2-s0-QMg">
+            <objects>
+                <viewController id="bA7-l9-EC4" customClass="MainMilestonesViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1zV-8T-aPa"/>
+                        <viewControllerLayoutGuide type="bottom" id="Skx-8z-M3w"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i3x-yR-OUQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.19999999999999968" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundBlurry" translatesAutoresizingMaskIntoConstraints="NO" id="jY7-Ch-sB8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="dataParentingIconBig" translatesAutoresizingMaskIntoConstraints="NO" id="t1B-Ep-q55">
+                                <rect key="frame" x="93" y="72" width="134" height="134.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="96" id="YBK-Or-e6X"/>
+                                    <constraint firstAttribute="width" secondItem="t1B-Ep-q55" secondAttribute="height" multiplier="1:1" id="u03-A6-FV7"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Record %@'s milestones and get tips and game ideas taylored just for %@" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="XDP-sR-dqD">
+                                <rect key="frame" x="16" y="222" width="288" height="124.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j6X-qk-WaL">
+                                <rect key="frame" x="0.0" y="464" width="320" height="55"/>
+                                <color key="backgroundColor" red="0.1019607857" green="0.55686277149999996" blue="0.62352943419999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="ouL-sV-olk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Get The App!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didClickGetAppNowButton:" destination="bA7-l9-EC4" eventType="touchUpInside" id="moD-GW-oEV"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="downArrowIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4hV-bg-6LT">
+                                <rect key="frame" x="139" y="414" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="2D8-rc-Y2I"/>
+                                    <constraint firstAttribute="width" constant="42" id="x2M-rm-17c"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="t1B-Ep-q55" secondAttribute="centerX" id="1WZ-tm-g7t"/>
+                            <constraint firstAttribute="centerX" secondItem="4hV-bg-6LT" secondAttribute="centerX" id="2oY-Lc-Tcy"/>
+                            <constraint firstAttribute="bottom" secondItem="jY7-Ch-sB8" secondAttribute="bottom" id="4fP-yz-GCi"/>
+                            <constraint firstItem="j6X-qk-WaL" firstAttribute="leading" secondItem="i3x-yR-OUQ" secondAttribute="leading" id="9I2-S9-tmv"/>
+                            <constraint firstAttribute="trailing" secondItem="jY7-Ch-sB8" secondAttribute="trailing" id="EQx-S6-hYX"/>
+                            <constraint firstAttribute="centerY" secondItem="XDP-sR-dqD" secondAttribute="centerY" id="GeR-qb-Cko"/>
+                            <constraint firstItem="XDP-sR-dqD" firstAttribute="leading" secondItem="i3x-yR-OUQ" secondAttribute="leading" constant="16" id="HGm-DQ-9Dj"/>
+                            <constraint firstAttribute="trailing" secondItem="j6X-qk-WaL" secondAttribute="trailing" id="M8q-Pw-3Mm"/>
+                            <constraint firstItem="t1B-Ep-q55" firstAttribute="top" secondItem="1zV-8T-aPa" secondAttribute="bottom" constant="8" id="YFL-oU-Ocw"/>
+                            <constraint firstAttribute="trailing" secondItem="XDP-sR-dqD" secondAttribute="trailing" constant="16" id="ZXz-gr-BKH"/>
+                            <constraint firstItem="XDP-sR-dqD" firstAttribute="top" secondItem="t1B-Ep-q55" secondAttribute="bottom" constant="16" id="fQP-zS-xtG"/>
+                            <constraint firstItem="jY7-Ch-sB8" firstAttribute="leading" secondItem="i3x-yR-OUQ" secondAttribute="leading" id="gGD-ze-Zez"/>
+                            <constraint firstItem="j6X-qk-WaL" firstAttribute="top" secondItem="4hV-bg-6LT" secondAttribute="bottom" constant="8" id="iNY-YC-oZn"/>
+                            <constraint firstItem="4hV-bg-6LT" firstAttribute="top" relation="greaterThanOrEqual" secondItem="XDP-sR-dqD" secondAttribute="bottom" constant="8" id="pqV-mY-u0L"/>
+                            <constraint firstItem="jY7-Ch-sB8" firstAttribute="top" secondItem="i3x-yR-OUQ" secondAttribute="top" id="sK3-W5-Dsi"/>
+                            <constraint firstItem="Skx-8z-M3w" firstAttribute="top" secondItem="j6X-qk-WaL" secondAttribute="bottom" id="y0T-Ti-K8Y"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="6ND-0z-L9i"/>
+                    <connections>
+                        <outlet property="arrowBottomContraint" destination="iNY-YC-oZn" id="tR1-oQ-ghN"/>
+                        <outlet property="getTheAppButton" destination="j6X-qk-WaL" id="qNc-3S-VE5"/>
+                        <outlet property="textLabel" destination="XDP-sR-dqD" id="CVL-hv-VLo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wWm-A8-RnJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3277" y="-1280"/>
         </scene>
         <!--Settings-->
         <scene sceneID="pv2-Rr-Ijh">
@@ -1921,6 +2006,8 @@ Essential Tips</string>
         <image name="cameraButton_pressed" width="212" height="212"/>
         <image name="closeMenuButton" width="31" height="32"/>
         <image name="dataParentingIcon" width="76" height="76"/>
+        <image name="dataParentingIconBig" width="128" height="128"/>
+        <image name="downArrowIcon" width="63" height="60"/>
         <image name="earlyReaderIcon" width="76" height="76"/>
         <image name="facebookIcon" width="29" height="29"/>
         <image name="femaleIcon" width="80" height="80"/>
@@ -1947,7 +2034,7 @@ Essential Tips</string>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="q2I-r6-ZGD"/>
-        <segue reference="M4B-Bx-AaL"/>
+        <segue reference="pAj-RG-2iH"/>
         <segue reference="9u5-1o-6Cv"/>
     </inferredMetricsTieBreakers>
 </document>
