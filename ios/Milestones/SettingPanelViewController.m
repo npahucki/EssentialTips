@@ -17,7 +17,6 @@
 @implementation SettingPanelViewController {
     BOOL _isLiveChatAvailable;
     HMChatOperatorAvailabilityCheck *_check;
-    NSAttributedString *_earlyReaderText;
 }
 
 + (void)initialize {

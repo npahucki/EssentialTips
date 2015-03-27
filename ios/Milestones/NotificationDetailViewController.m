@@ -57,13 +57,13 @@
 
 - (IBAction)didClickActionButton:(id)sender {
     NSString *tipType = self.tipAssignment.tip.tipType == TipTypeGame ? @"game" : @"tip";
-    NSString *mainText = [NSString stringWithFormat:@"I want to share this cool baby %@ I found on DataParenting:\n\"%@\"\n\n%@\n",
+    NSString *mainText = [NSString stringWithFormat:@"I want to share this cool baby %@ I found on InfantIQ Essential Tips:\n\"%@\"\n\n%@\n",
                                                     tipType,
                                                     self.tipAssignment.tip.titleForCurrentBaby, self.tipAssignment.tip.shortDescriptionForCurrentBaby];
-    NSURL *url = [NSURL URLWithString:@"http://www.dataparenting.com"];
+    NSURL *url = [NSURL URLWithString:@"http://www.infantiq.com"];
     NSArray *items = @[mainText, url];
     UIActivityViewController *controller = [[UIActivityViewController alloc] initWithActivityItems:items applicationActivities:nil];
-    [controller setValue:[NSString stringWithFormat:@"Cool baby %@ I found on DataParenting.", tipType] forKey:@"subject"];
+    [controller setValue:[NSString stringWithFormat:@"Cool baby %@ I found on InfantIQ", tipType] forKey:@"subject"];
     controller.excludedActivityTypes = @[UIActivityTypeAssignToContact, UIActivityTypePostToVimeo];
     [controller setCompletionHandler:^(NSString *activityType, BOOL completed) {
         if (completed) {

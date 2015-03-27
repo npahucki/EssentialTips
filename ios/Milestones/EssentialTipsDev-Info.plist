@@ -28,10 +28,10 @@
 	<array>
 		<dict>
 			<key>CFBundleURLName</key>
-			<string>com.dataparenting.DataParentingDev</string>
+			<string>com.infantiq.EssentialTipsDev</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>dataparentingappdev</string>
+				<string>essentialtipsappdev</string>
 			</array>
 		</dict>
 		<dict>

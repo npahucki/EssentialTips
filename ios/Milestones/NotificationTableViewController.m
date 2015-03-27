@@ -29,13 +29,13 @@
     self.rightUtilityButtons = rightUtilityButtons;
 
     self.textLabel.textColor = [UIColor appNormalColor];
-    self.detailTextLabel.font = DETAIL_FONT;
     self.detailTextLabel.textColor = [UIColor appGreyTextColor];
 }
 
 - (void)setBabyAssignedTip:(BabyAssignedTip *)tipAssignment {
     self.textLabel.text = tipAssignment.tip.titleForCurrentBaby;
     self.textLabel.font = tipAssignment.viewedOn ? TITLE_FONT_READ : TITLE_FONT_UNREAD;
+    self.detailTextLabel.font = DETAIL_FONT;
     self.detailTextLabel.text = [NSString stringWithFormat:@"Delivered %@", [tipAssignment.assignmentDate stringWithHumanizedTimeDifference]];
     self.imageView.image = [UIImage imageNamed:tipAssignment.tip.tipType == TipTypeGame ? @"gameIcon" : @"tipsButton_active"];
     self.accessoryType = tipAssignment.tip.url.length ? UITableViewCellAccessoryDetailButton : UITableViewCellAccessoryNone;
