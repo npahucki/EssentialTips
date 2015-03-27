@@ -14,13 +14,8 @@ pod 'ParseFacebookUtils', '1.6.5'
 pod 'ParseUI', '1.1.1'
 pod 'PFCloud+Cache', :git => 'https://github.com/npahucki/PFCloud-Cache.git', :commit => '97118e8785baafa7032ba142e0b00c6b102521d9'
 pod 'UIActionSheet+Blocks'
-#pod 'BCGenieEffect', '1.1'
 pod 'AppsFlyer-SDK', '2.5.3.11.1'
-#pod 'RMStore/AppReceiptVerificator', '0.7.1'
-pod 'UXCam', '1.0.8'
 pod 'Mixpanel', '2.7.2'
-#pod 'MBContactPicker', :git => 'https://github.com/npahucki/MBContactPicker.git', :commit => 'b7e7510d21e3e5fdf5f2054bf1775dabb888c412'
-#pod 'MBContactPicker', '0.1.6'
 pod 'CMPopTipView', '2.2'
 
 

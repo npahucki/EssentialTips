@@ -6,7 +6,6 @@
 //  Copyright (c) 2015 InfantIQ. All rights reserved.
 //
 
-#import <UXCam/UXCam.h>
 #import "Heap.h"
 #import "NSDate+Utils.h"
 #import "AppsFlyerTracker.h"
@@ -53,8 +52,6 @@ static BOOL isRelease;
     [Heap changeInterval:30];
     NSString *mixPanelKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"DP.MixPanelKey"];
     Mixpanel *mixpanel = [Mixpanel sharedInstanceWithToken:mixPanelKey launchOptions:launchOptions];
-    NSString *uxCamKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"DP.UXCamKey"];
-    [UXCam startApplicationWithKey:uxCamKey];
 
     if (isRelease) {
         [AppsFlyerTracker sharedTracker].appsFlyerDevKey = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"DP.AppsFlyerDevKey"];
@@ -85,9 +82,6 @@ static BOOL isRelease;
         if (isRelease) {
             Mixpanel *mixpanel = [Mixpanel sharedInstance];
             [Heap identify:props];
-            [UXCam tagUsersName:user.objectId additionalData:user.email];
-            [UXCam addTag:user.isMale ? @"male" : @"female"];
-            [UXCam addTag:user.email ? @"anonymous" : @"signedup"];
             [mixpanel identify:mixpanel.distinctId];
             if (user.email) props[@"$email"] = user.email;
             [mixpanel.people set:props];
@@ -255,17 +249,6 @@ static BOOL isRelease;
         [FBAppEvents logEvent:@"adClicked" parameters:@{@"adIdentifier" : adIdentifier}];
     } else {
         NSLog(@"[USAGE ANALYTICS]: trackAdClick - AdId:%@", adIdentifier);
-    }
-}
-
-+ (void)trackTutorialManuallyTaken {
-    if (isRelease) {
-        [Heap track:@"tutotialManuallyTaken"];
-        [[Mixpanel sharedInstance] track:@"tutotialManuallyTaken"];
-        [[Mixpanel sharedInstance].people set:@"tutotialManuallyTaken" to:@(YES)];
-        [FBAppEvents logEvent:FBAppEventNameCompletedTutorial];
-    } else {
-        NSLog(@"[USAGE ANALYTICS]: tutotialManuallyTaken");
     }
 }
 

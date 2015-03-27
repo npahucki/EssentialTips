@@ -29,7 +29,7 @@
 		<dict>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb682520505147994</string>
+				<string>fb682520505147994tips</string>
 			</array>
 		</dict>
 		<dict>
@@ -50,29 +50,27 @@
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
-	<string>1.0.0.0</string>
+	<string>1.0.0.1</string>
 	<key>DP.AppleStoreId</key>
-	<string>905124835</string>
+	<string>980367889</string>
 	<key>DP.AppsFlyerDevKey</key>
 	<string>rb2piyfLLw8aNdxK8nVrh8</string>
 	<key>DP.HeapAppId</key>
-	<string>714546901</string>
+	<string>469884249</string>
 	<key>DP.HipMobAppId</key>
-	<string>351394c1fbf04177ad7e5ee7ab11a64b</string>
+	<string>5242832472954f69a7f6d6ebe153edb5</string>
 	<key>DP.MixPanelKey</key>
-	<string>816b648a29cc2cb430509fc61ba456f9</string>
-	<key>DP.OptimizelyToken</key>
-	<string>AAMseu0AsOMdUZtL0ZgMnhKHUl9UprdI~2109860107</string>
+	<string>8c5bcbc29dc7b85aaeac439cb4aa7ef8</string>
 	<key>DP.ParseApplicationId</key>
 	<string>Vxvqum0HRF1NB00LEf2faaJYFzxd2Xh8hyrdY8MY</string>
 	<key>DP.ParseClientId</key>
 	<string>N4kS8ush3bY6Arb05tI86Gx9uA2EDiZEqzpVDrvq</string>
-	<key>DP.UXCamKey</key>
-	<string>0f8f1a1df982f8a</string>
 	<key>FacebookAppID</key>
 	<string>682520505147994</string>
 	<key>FacebookDisplayName</key>
-	<string>DataParenting</string>
+	<string>Essential Tips</string>
+	<key>FacebookUrlSchemeSuffix</key>
+	<string>tips</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>

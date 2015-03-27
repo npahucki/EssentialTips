@@ -23,6 +23,7 @@
 
     self.babyAvatar.file = Baby.currentBaby.avatarImage;
     [self.babyAvatar loadInBackground];
+    self.babyAvatar.alpha = 1.0;
 
     // Handle any touches on the image or baby name to put into edit mode.
     [self.babyAvatar addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleEditTap:)]];
