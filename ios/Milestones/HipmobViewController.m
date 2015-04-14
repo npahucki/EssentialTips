@@ -3,8 +3,8 @@
 ///  Copyright (c) 2015 InfantIQ. All rights reserved.
 //
 
-#import <hipmob/HMService.h>
-#import <hipmob/HMChatMessage.h>
+#import "hipmob/HMService.h"
+#import "hipmob/HMChatMessage.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import "HipmobViewController.h"
 #import "MainViewController.h"

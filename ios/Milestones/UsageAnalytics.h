@@ -34,8 +34,6 @@
 
 + (void)trackAdClicked:(NSString *)adIdentifier;
 
-+ (void)trackTutorialManuallyTaken;
-
 + (void)trackAppInstalled;
 
 + (void)trackSignupTrigger:(NSString *)string withChoice:(BOOL)choice;

@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>Essential Tips</string>
+	<string>Genius Tips</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIcons</key>
@@ -68,7 +68,7 @@
 	<key>FacebookAppID</key>
 	<string>682520505147994</string>
 	<key>FacebookDisplayName</key>
-	<string>Essential Tips</string>
+	<string>Genuis Tips</string>
 	<key>FacebookUrlSchemeSuffix</key>
 	<string>tips</string>
 	<key>LSApplicationCategoryType</key>

@@ -57,7 +57,7 @@
 
 - (IBAction)didClickActionButton:(id)sender {
     NSString *tipType = self.tipAssignment.tip.tipType == TipTypeGame ? @"game" : @"tip";
-    NSString *mainText = [NSString stringWithFormat:@"I want to share this cool baby %@ I found on InfantIQ Essential Tips:\n\"%@\"\n\n%@\n",
+    NSString *mainText = [NSString stringWithFormat:@"I want to share this cool baby %@ I found on InfantIQ Genius Tips:\n\"%@\"\n\n%@\n",
                                                     tipType,
                                                     self.tipAssignment.tip.titleForCurrentBaby, self.tipAssignment.tip.shortDescriptionForCurrentBaby];
     NSURL *url = [NSURL URLWithString:@"http://www.infantiq.com"];

@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 InfantIQ. All rights reserved.
 //
 
-#import <hipmob/HMService.h>
+#import "hipmob/HMService.h"
 #import "MainViewController.h"
 #import "OnboardingStepViewController.h"
 
