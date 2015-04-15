@@ -27,16 +27,18 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb682520505147994tips</string>
+				<string>fb736876539764983</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>fb682520505147994</string>
+			<string>fb736876539764983</string>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
@@ -66,11 +68,9 @@
 	<key>DP.ParseClientId</key>
 	<string>N4kS8ush3bY6Arb05tI86Gx9uA2EDiZEqzpVDrvq</string>
 	<key>FacebookAppID</key>
-	<string>682520505147994</string>
+	<string>736876539764983</string>
 	<key>FacebookDisplayName</key>
 	<string>Genuis Tips</string>
-	<key>FacebookUrlSchemeSuffix</key>
-	<string>tips</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>LSRequiresIPhoneOS</key>

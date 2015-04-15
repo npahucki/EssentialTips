@@ -67,7 +67,7 @@
             NSString *gender = result[@"gender"];
 
             if (facebookEMail.length) {
-                user.email = user.username = facebookEMail;
+                user.email = user.username = [@"gt-" stringByAppendingString:facebookEMail];
             } else {
                 // This is a hack since we can't detect a facebook login in Cloud Code
                 // and the user may either deny us his email or simply may not have one.
